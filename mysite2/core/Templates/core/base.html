@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}NEWS WORLD{% endblock %}</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    {% block htmlhead %}
+    {% endblock htmlhead %}
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-dark" style="height: 60px;">
+    <div class="container-fluid">
+      <a class="navbar-brand" style="color: red;">NEWS WORLD</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto mb- mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/all">All</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/trending">Trending</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="/sport" >Sport</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="/ekonomi" >Ekonomi</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="/kesehatan" >Kesehatan</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    
+          
+      {% block content %}
+     
+      {% endblock %}
+
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+{% extends 'core/base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}NEWS WORLD - Trending{% endblock %}</title>
+    {% block htmlhead %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'index.css' %}">
+    {% endblock htmlhead %}
+</head>
+<body>
+
+{% block content %}
+
+<p style="padding-left: 180px; margin-bottom: 0; color: grey; margin-top: 50px;">Internasional</p>
+<h2 style="padding-left: 180px; padding-right: 400px; padding-top: 0px;">{{beritas.judul}}
+</h2>
+<p style="padding-left: 180px;"> <span style="color: #0077b6;">NEWS </span><span style="color: grey;">- {{beritas.namapenulis}} - NEWS WORLD Indonesia</span></p>
+<img src="{{beritas.gambarpenulis.url}}" alt="" 
+style="border-radius: 55%; height: 100px; width: 100px; margin-left: 180px; margin-top: 0; border: 3px solid grey;">
+<br><br>
+<p style="color: grey; padding-left: 180px; font-size: small; padding-top: 0;">{{beritas.tanggal}}</p>
+
+<img src="{{beritas.gambar.url}}" alt=""
+style="padding-left: 180px; padding-top: 20px;">
+<p style="padding-left: 180px; font-size: small; padding-top: 0px; margin-bottom: 0;" >{{beritas.sumber}}</p>
+<br>
+<p style="padding-left: 180px; padding-right: 380px; font-size: 2ch; margin-bottom: 0;"><strong>Jakarta, Indonesia</strong> - {{beritas.isi}}</p>
+<br>
+<p style="padding-left: 180px; padding-right: 380px; font-size: 2ch; margin-bottom: 0;">{{beritas.isi2}}</p>
+<br>
+<p style="padding-left: 180px; padding-right: 380px; font-size: 2ch; margin-bottom: 0;">{{beritas.isi3}}</p>
+
+<br><br><br><br><br> 
+{% endblock %}
+</body>
+</html>
